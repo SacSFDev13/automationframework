@@ -1,0 +1,11 @@
+<suite name="HybridSuite">
+    <test name="APITests">
+        <classes>
+            <class name="api.ReqResAPITest"/>
+        </classes>
+    </test>
+    <listeners>
+        <listener class-name="report.CustomHtmlReporter"/>
+    </listeners>
+
+</suite>
