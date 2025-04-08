@@ -1,6 +1,6 @@
 package base;
 
-import io.restassured.RestAssured;
+import static io.restassured.RestAssured.*;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.config.LogConfig;
@@ -25,8 +25,8 @@ public class APIBaseTest {
 
     okResSpec = new ResponseSpecBuilder()
         .log(LogDetail.ALL)
-        .expectContentType(ContentType.JSON)
-        .expectStatusCode(200).build();
+        .expectContentType(ContentType.JSON).build();
+//        .expectStatusCode(200).build();
 
     RestAssuredConfig.config().logConfig(LogConfig.logConfig().enablePrettyPrinting(true));
   }

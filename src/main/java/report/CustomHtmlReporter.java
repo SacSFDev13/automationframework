@@ -51,7 +51,15 @@ public class CustomHtmlReporter implements IReporter {
 
       writer.write("<tr>");
       writer.write("<td>" + testName + "</td>");
-      writer.write("<td class='" + status + "'>" + status.toUpperCase() + "</td>");
+      if(status.toLowerCase().equalsIgnoreCase("fail")) {
+        String line = "<a href='..\\test-output\\Screenshots\\" +
+            result.getName() + "_test.png'> " + status.toUpperCase() +"<br/><img src='..\\test-output\\Screenshots\\" +
+            result.getName() +"_test.png' height='100' width='100'/> </a>";
+        writer.write("<td class='" + status + "'>" + line +"</td>");
+      }
+      else {
+        writer.write("<td class='" + status + "'>" + status.toUpperCase() + "</td>");
+      }
       writer.write("<td>" + duration + " ms</td>");
       writer.write("<td>" + error + "</td>");
       writer.write("</tr>");
