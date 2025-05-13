@@ -1,17 +1,17 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >
-<suite name="HybridSuite">
+<suite name="HybridSuite" verbose="0">
    <!-- <test name="API Tests">
         <classes>
             <class name="api.ReqResAPITest"/>
         </classes>
     </test>-->
-    <test name="Web-UI Tests">
+    <test name="Web-UI Tests" parallel="classes" thread-count="3">
         <classes>
             <class name="web.AutomationPractice"/>
         </classes>
     </test>
     <listeners>
-        <listener class-name="report.CustomHtmlReporter"/>
+        <!--<listener class-name="report.CustomHtmlReporter"/>-->
+        <listener class-name="util.MyCustomListeners"/>
     </listeners>
 
 </suite>

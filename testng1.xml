@@ -1,0 +1,12 @@
+<suite name="HybridSuite" verbose="0">
+    <test name="runner-test">
+        <classes>
+            <class name="TestNgRunner"/>
+        </classes>
+    </test>
+    <listeners>
+        <!--<listener class-name="report.CustomHtmlReporter"/>-->
+<!--        <listener class-name="util.MyCustomListeners"/>-->
+    </listeners>
+
+</suite>

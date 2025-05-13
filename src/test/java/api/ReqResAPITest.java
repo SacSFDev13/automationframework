@@ -3,9 +3,9 @@ package api;
 import base.APIBaseTest;
 import static io.restassured.RestAssured.*;
 
-import io.qameta.allure.Description;
+/*import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
+import io.qameta.allure.Feature;*/
 import io.restassured.response.Response;
 import static org.hamcrest.Matchers.*;
 import org.testng.Assert;
@@ -22,12 +22,15 @@ public class ReqResAPITest extends APIBaseTest {
   public void getMethodTest() {
     Response response = given()
         .spec(reqSpec)
+        .queryParam("page", 2)
+        .queryParam("per_page", 10)
         .when()
-        .get("/users?page=2")
+        .get("/users")
         .then()
         .spec(okResSpec)
         .extract().response();
     Assert.assertEquals(response.getStatusCode(), 200);
+    System.out.println(response.jsonPath().getList("data.email"));
   }
 
 

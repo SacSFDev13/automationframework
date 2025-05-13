@@ -28,6 +28,6 @@ public class APIBaseTest {
         .expectContentType(ContentType.JSON).build();
 //        .expectStatusCode(200).build();
 
-    RestAssuredConfig.config().logConfig(LogConfig.logConfig().enablePrettyPrinting(true));
+ //   RestAssuredConfig.config().logConfig(LogConfig.logConfig().enablePrettyPrinting(true));
   }
 }
