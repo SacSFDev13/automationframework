@@ -1,14 +1,14 @@
 <suite name="HybridSuite" verbose="0">
-   <!-- <test name="API Tests">
+    <test name="API Tests">
         <classes>
-            <class name="api.ReqResAPITest"/>
+            <class name="api.PetAPITests"/>
         </classes>
-    </test>-->
-    <test name="Web-UI Tests" parallel="classes" thread-count="3">
+    </test>
+  <!--  <test name="Web-UI Tests" parallel="classes" thread-count="3">
         <classes>
             <class name="web.AutomationPractice"/>
         </classes>
-    </test>
+    </test>-->
     <listeners>
         <!--<listener class-name="report.CustomHtmlReporter"/>-->
         <listener class-name="util.MyCustomListeners"/>

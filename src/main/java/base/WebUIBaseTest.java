@@ -59,6 +59,4 @@ public class WebUIBaseTest {
       e.printStackTrace();
     }
   }
-
-
 }

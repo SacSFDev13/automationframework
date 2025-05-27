@@ -27,7 +27,7 @@ public class Homepage {
         return this.toWebElement(homeMenu).getAttribute("style").contains("color: orange");
       }
 
-      public static WebElement toWebElement(By locator) {
-        return locator.findElement((SearchContext) locator);
+      public WebElement toWebElement(By locator) {
+        return this.driver.findElement(locator);
       }
 }

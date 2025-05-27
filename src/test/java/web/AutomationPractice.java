@@ -34,9 +34,7 @@ public class AutomationPractice extends WebUIBaseTest {
 
   }
 
-}
-
- /*@Ignore
+  @Ignore
 @Test //(dataProvider = "NameData", dataProviderClass = FlipkartTest.class, retryAnalyzer = RetryFailedTest.class) //dataProvider = "NameData", dataProviderClass = FlipkartTest.class, retryAnalyzer = RetryFailedTest.class
   public void registerUser(Method method) throws InterruptedException {
   driver.get().get("http://google.com");
@@ -44,14 +42,14 @@ public class AutomationPractice extends WebUIBaseTest {
   System.out.println(Thread.currentThread().getId() + "  --> " + driver.get().toString());
  // assert
       //driver.get().findElement(By.xpath("//div[contains(@class,\"shop-menu\")]/ul/li/a[contains(text(), \"Home\")]")).isDisplayed();
-  *//*driver.findElement(By.xpath("//div[contains(@class,\"shop-menu\")]/ul/li/a[contains(text(), \"Products\")]")).click();
-  File file = driver.findElement(By.xpath("//div[contains(@class,\"shop-menu\")]/ul/li/a[contains(text(), \"Products\")]")).getScreenshotAs(OutputType.FILE);
+  driver.get().findElement(By.xpath("//div[contains(@class,\"shop-menu\")]/ul/li/a[contains(text(), \"Products\")]")).click();
+  File file = driver.get().findElement(By.xpath("//div[contains(@class,\"shop-menu\")]/ul/li/a[contains(text(), \"Products\")]")).getScreenshotAs(OutputType.FILE);
   File desFile = new File(System.getProperty("user.dir") + "\\Screenshots\\elementscreenshot.png");
   try {
     FileUtils.copyFile(file, desFile);
   } catch (IOException e) {
     e.printStackTrace();
-  }*//*
+  }
   Thread.sleep(1000);
   Reporter.log("Sample report log on Test method");
   Assert.assertEquals(1, 1);
@@ -81,5 +79,9 @@ public void test2() throws InterruptedException {
   Reporter.log("Sample report log on Test method");
   System.out.println(products.size());
   Assert.assertEquals(products.size(), 34);
-}*/
+}
+
+}
+
+
 
