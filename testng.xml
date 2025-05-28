@@ -4,8 +4,8 @@
             <class name="api.ReqResAPITest"/>
         </classes>
     </test>
-    <listeners>
+    <!--<listeners>
         <listener class-name="report.CustomHtmlReporter"/>
-    </listeners>
+    </listeners>-->
 
 </suite>
